@@ -16,3 +16,7 @@
 /labs/pcf-workshop-dotnet-core-lab02-client/obj
 /labs/pcf-workshop-dotnet-core-lab03/bin
 /labs/pcf-workshop-dotnet-core-lab03/obj
+/labs/pcf-workshop-dotnet-core-lab04-after/obj
+/labs/pcf-workshop-dotnet-core-lab04-after/bin/Release/netcoreapp2.0
+/labs/pcf-workshop-dotnet-core-lab04-before/bin/Release/netcoreapp2.0
+/labs/pcf-workshop-dotnet-core-lab04-before/obj

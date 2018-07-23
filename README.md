@@ -32,7 +32,7 @@ It is recommended to follow the labs in sequence, but
 * Step 3, demonstrates pushing an app using the CLI with a manifest file.
 * Step 4, demonstrates scaling an app with more disk space, memory, and running instance count.
 
-### [Lab 2](https://github.com/pivotal-nyc/pcf-workshop-dotnet/tree/master/labs/pcf-workshop-dotnet-core-lab02) - Intermediate
+### [Lab 2](https://github.com/pivotal-nyc/pcf-workshop-dotnet/tree/master/labs/pcf-workshop-dotnet-core-lab02-api) - Intermediate
 
 * Step 1, deploy an ASP.NET 2.0 Web API project.
 * Step 2, create and bind an auto-scaler service.
@@ -43,3 +43,7 @@ It is recommended to follow the labs in sequence, but
 
 * Step 1, forcibly kill one app instance out of three to observe the platform restore it automatically.
 * Step 2, demonstrates a blue-green deployment to execute a zero-downtime deployment.
+
+### [Lab 4](https://github.com/pivotal-nyc/pcf-workshop-dotnet/tree/master/labs/pcf-workshop-dotnet-core-lab03) - Advanced
+
+* Step 1, 
