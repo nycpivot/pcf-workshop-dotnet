@@ -4,33 +4,29 @@ This one day hands-on classroom style session will provide developers (and opera
 
 ## Getting Started
 
-The source code for all the labs can be cloned to your local desktop from the following location.
+The source code for all the labs can be cloned to your local desktop using the following git command.
 
-* [pcf-workshop-dotnet](https://github.com/pivotal-nyc/pcf-workshop-dotnet.git)
+* git clone https://github.com/pivotal-nyc/pcf-workshop-dotnet.git
 
 ### Prerequisites
 
 The following tools are required to be installed on the local machine. 
 
-* [CF CLI](https://github.com/cloudfoundry/cli#downloads)
+* [cf cli](https://github.com/cloudfoundry/cli#downloads)
+* [git](https://git-scm.com/downloads) - only needed to clone the samples.
 
-### Installing
+The environment is...
 
-A step by step series of examples that tell you how to get a development env running
+## Course Materials
 
-Say what the step will be
+It is recommended to follow the labs in sequence, but 
 
-```
-Give the example
-```
+### Lab 01
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+* Section 1, describes how to quickly get help for any CLI command.
+* Section 2, demonstrates pushing an app using the CLI only.
+* Section 3, demonstrates pushing an app using the CLI with a manifest file.
+* Section 4, demonstrates scaling an app with more disk space, memory, and running instance count.
 
 ## Running the tests
 
