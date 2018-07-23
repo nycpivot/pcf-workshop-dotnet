@@ -7,3 +7,5 @@
 /.vs/VSWorkspaceState.json
 /labs/pcf-workshop-dotnet-core-lab01/obj
 /labs/pcf-workshop-dotnet-core-lab01/bin/Debug/netcoreapp2.0
+/.vs/pcf-workshop-dotnet/v15
+/labs/pcf-workshop-dotnet-core-lab01/bin/Release/netcoreapp2.0
