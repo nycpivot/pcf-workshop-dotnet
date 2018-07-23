@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/pcf-workshop-dotnet/v15/Server/sqlite3
+/.vs/pcf-workshop-dotnet/DesignTimeBuild
+/.vs/VSWorkspaceState.json
+/labs/pcf-workshop-dotnet-core-lab01/obj
+/labs/pcf-workshop-dotnet-core-lab01/bin/Debug/netcoreapp2.0
