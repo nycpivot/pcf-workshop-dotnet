@@ -1,61 +1,59 @@
-﻿# Pivotal Cloud Foundry 101 Workshop
+﻿# LAB 2: SERVICES
 
-## LAB 1: PUSH A .NET CORE APPLICATION
+## STEP 1 - WEB API
 
-### STEP 1 - HELP
-
-1. Type any command in the CF CLI without any parameters. The following examples
-
-	cf app
-	cf service
-	cf create-service
-
-### STEP 2 - DEFAULT PUSH
-
-1. Navigate to the folder containing the lab 1 project files.
-2. Without making any changes, publish a Release build.
+1. Navigate to the folder containing the lab 2 project files.
+2. Open the manifest.yml file and provide a unique name.
+3. Publish a Release build.
 
 		dotnet publish -c Release
 
-3. Navigate to the publish folder and deploy the app.
+4. Navigate to the publish folder and deploy the app.
 
-		cf push <app-name>-lab01-<your-name>
+		cf push <app-name>-lab02-<your-name>
 
-4. Navigate to url from the PCF dashboard.
+5. Navigate to url from the PCF dashboard.
 
-### STEP 3 - MANIFEST PUSH
+## STEP 2 - CREATE AND BIND A SERVICE
 
-1. Open the manifest.yml file included in the project.
-2. Add the following settings to the file.
+1. View marketplace in Apps Manager or CLI.
 
----
-applications:
--   name: <app-name>-lab01-<your-name>
-	buildpack: dotnet_core_buildpack
-	instances: 1
-	memory: 256M
+		cf m|marketplace
 
-3. In the Configure method of the Startup.cs file, change the "Hello World!" text.
-4. Publish to Release folder.
-5. Change directory to Release folder (ensure manifest.yml was published).
-6. Push app.
+2. View details for app-autoscaler to determine the free plan.
 
-	cf push
+		cf m -s app-autoscaler
 
-7. Navigate to url from the PCF dashboard.
+3. Create app-autoscaler from Apps Manager or CLI.
 
-8. Confirm the new value is output on the page.
+		cf create-service app-autoscaler standard pcf-workshop-auto-scaler
+
+4. Verify creation of service.
+
+		cf services
+
+5. Bind a service to an app.
+
+		cf bind-service <app-name>-lab02-<your-name> pcf-workshop-auto-scaler
+
+6. Restage app.
+
+		cf restage <app-name>-lab02-<your-name>
 	
-### STEP 4 - SCALE
+## STEP 3 - CONFIGURE SERVICE (APPS MANAGER ONLY)
 
-1. Observe instance count, memory, disk size from apps manager or CLI.
-
-	cf app <app-name>-lab01-<your-name>
-
-2. Double the instance count, memory, and disk size.
-
-	cf scale <app-name>-lab01-<your-name> -i 2 -k 500M -m 500M
-
-3. Observe updates in Apps Manager or CLI.
-
-	cf app <app-name>-lab01-<your-name>
+1. Open App AutoScaler from Services tab.
+2. Click Manage link in upper right corner.
+3. Click the Edit link to change the Instance Limits.
+4. Change Minimum to 2 and Maximum to 5.
+5. Click Save.
+6. Click the Edit link to change the Scaling Rules.
+7. Select HTTP Throughput from the policy dropdown.
+8. Set "Scale down if less than" to 2.
+9. Set "Scale up if more than" to 5.
+10. Toggle the bar next to the HTTP Throughput policy to enable it.
+11. Click Save.
+12. Back on the Auto Scaler settings, toggle the bar to Enable all settings.
+13. Close window.
+14. From the App tab in your Space, click on the app name.
+15. In the Processes and Instances section, observe the two minimum running instances.

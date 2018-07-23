@@ -1,6 +1,6 @@
 ﻿---
 applications:
--   name: <app-name>-lab02-<your-name>
+-   name: pcf-workshop-dotnet-core-lab02
     buildpack: dotnet_core_buildpack
     instances: 1
     memory: 256M
