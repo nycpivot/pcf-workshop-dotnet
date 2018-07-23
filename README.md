@@ -13,7 +13,7 @@ The source code for all the labs can be cloned to your local desktop using the f
 The following tools are required to be installed on the local machine. 
 
 * [cf cli](https://github.com/cloudfoundry/cli#downloads)
-* [git](https://git-scm.com/downloads) - only needed to clone the samples.
+* [git](https://git-scm.com/downloads)
 
 The environment is...
 
@@ -21,12 +21,12 @@ The environment is...
 
 It is recommended to follow the labs in sequence, but 
 
-### Lab 01
+### [Lab 1](https://github.com/pivotal-nyc/pcf-workshop-dotnet/tree/master/labs/pcf-workshop-dotnet-core-lab01)
 
-* Section 1, describes how to quickly get help for any CLI command.
-* Section 2, demonstrates pushing an app using the CLI only.
-* Section 3, demonstrates pushing an app using the CLI with a manifest file.
-* Section 4, demonstrates scaling an app with more disk space, memory, and running instance count.
+* Step 1, describes how to quickly get help for any CLI command.
+* Step 2, demonstrates pushing an app using the CLI only.
+* Step 3, demonstrates pushing an app using the CLI with a manifest file.
+* Step 4, demonstrates scaling an app with more disk space, memory, and running instance count.
 
 ## Running the tests
 

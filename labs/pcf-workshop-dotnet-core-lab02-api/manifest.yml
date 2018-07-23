@@ -1,0 +1,6 @@
+﻿---
+applications:
+-   name: <app-name>-lab02-<your-name>
+    buildpack: dotnet_core_buildpack
+    instances: 1
+    memory: 256M

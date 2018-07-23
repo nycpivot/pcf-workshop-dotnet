@@ -9,3 +9,6 @@
 /labs/pcf-workshop-dotnet-core-lab01/bin/Debug/netcoreapp2.0
 /.vs/pcf-workshop-dotnet/v15
 /labs/pcf-workshop-dotnet-core-lab01/bin/Release/netcoreapp2.0
+/pcf-workshop-dotnet-core-lab02-api/obj
+/labs/pcf-workshop-dotnet-core-lab02-api/bin
+/labs/pcf-workshop-dotnet-core-lab02-api/obj
