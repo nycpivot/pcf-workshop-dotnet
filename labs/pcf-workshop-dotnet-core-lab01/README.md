@@ -17,7 +17,7 @@
 
 3. Navigate to the publish folder and deploy the app.
 
-		cf push <app-name>-lab01-<your-name>
+		cf push [app-name]-[your-name]-lab01
 
 4. Navigate to url from the PCF dashboard.
 
@@ -28,7 +28,7 @@
 
 ---
 applications:
--   name: <app-name>-lab01-<your-name>
+-   name: [app-name]-[your-name]-lab01
 	buildpack: dotnet_core_buildpack
 	instances: 1
 	memory: 256M
@@ -48,12 +48,12 @@ applications:
 
 1. Observe instance count, memory, disk size from apps manager or CLI.
 
-	cf app <app-name>-lab01-<your-name>
+	cf app [app-name]-[your-name]-lab01
 
 2. Double the instance count, memory, and disk size.
 
-	cf scale <app-name>-lab01-<your-name> -i 2 -k 500M -m 500M
+	cf scale [app-name]-[your-name]-lab01 -i 2 -k 500M -m 500M
 
 3. Observe updates in Apps Manager or CLI.
 
-	cf app <app-name>-lab01-<your-name>
+	cf app [app-name]-[your-name]-lab01

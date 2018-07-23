@@ -21,6 +21,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pcf-workshop-dotnet-core-la
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pcf-workshop-dotnet-core-lab02-client", "labs\pcf-workshop-dotnet-core-lab02-client\pcf-workshop-dotnet-core-lab02-client.csproj", "{2FEA6DF3-8BAD-44A6-AD6A-7CDE5A8BC215}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lab03", "lab03", "{A45666F3-74E9-49BD-802B-9F0B0DCD9BC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pcf-workshop-dotnet-core-lab03", "labs\pcf-workshop-dotnet-core-lab03\pcf-workshop-dotnet-core-lab03.csproj", "{41FDBC89-5425-4755-9243-33485D28E017}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,10 @@ Global
 		{2FEA6DF3-8BAD-44A6-AD6A-7CDE5A8BC215}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FEA6DF3-8BAD-44A6-AD6A-7CDE5A8BC215}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FEA6DF3-8BAD-44A6-AD6A-7CDE5A8BC215}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41FDBC89-5425-4755-9243-33485D28E017}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41FDBC89-5425-4755-9243-33485D28E017}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41FDBC89-5425-4755-9243-33485D28E017}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41FDBC89-5425-4755-9243-33485D28E017}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,6 +55,7 @@ Global
 		{B0ABE87E-C0E8-491B-A580-BF42809C8667} = {7AEF6CC6-C9B7-43EB-9917-A40000FB25A0}
 		{FACC8DE2-BAAC-4DE9-B253-9529BCE6B8D6} = {FFC74862-D952-4A34-A721-F3CAC2EB611C}
 		{2FEA6DF3-8BAD-44A6-AD6A-7CDE5A8BC215} = {FFC74862-D952-4A34-A721-F3CAC2EB611C}
+		{41FDBC89-5425-4755-9243-33485D28E017} = {A45666F3-74E9-49BD-802B-9F0B0DCD9BC0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6502E06E-975E-446C-B2E2-90A572B6BA19}

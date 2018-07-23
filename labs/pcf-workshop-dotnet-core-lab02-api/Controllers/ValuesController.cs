@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Pcf.Workshop.Dotnet.Core.Lab02.Api.Controllers
@@ -10,6 +11,8 @@ namespace Pcf.Workshop.Dotnet.Core.Lab02.Api.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
+            Thread.Sleep(1000);
+
             return new string[] { "value1", "value2" };
         }
 

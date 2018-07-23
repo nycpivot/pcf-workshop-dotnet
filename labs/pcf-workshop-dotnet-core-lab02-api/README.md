@@ -10,7 +10,7 @@
 
 4. Navigate to the publish folder and deploy the app.
 
-		cf push <app-name>-lab02-<your-name>
+		cf push [app-name]-[your-name]-lab02
 
 5. Navigate to url from the PCF dashboard.
 
@@ -34,11 +34,11 @@
 
 5. Bind a service to an app.
 
-		cf bind-service <app-name>-lab02-<your-name> pcf-workshop-auto-scaler
+		cf bind-service [app-name]-[your-name]-lab02 pcf-workshop-auto-scaler
 
 6. Restage app.
 
-		cf restage <app-name>-lab02-<your-name>
+		cf restage [app-name]-[your-name]-lab02
 	
 ## STEP 3 - CONFIGURE SERVICE (APPS MANAGER ONLY)
 
