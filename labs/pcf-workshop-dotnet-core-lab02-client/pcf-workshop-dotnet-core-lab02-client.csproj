@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>Pcf.Workshop.Dotnet.Core.Lab02.Client</RootNamespace>
+  </PropertyGroup>
+
+</Project>

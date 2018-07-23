@@ -57,3 +57,10 @@
 13. Close window.
 14. From the App tab in your Space, click on the app name.
 15. In the Processes and Instances section, observe the two minimum running instances.
+
+## STEP 4 - LOAD TESTER
+
+1. Launch the client console application.
+2. Input the parameters necessary to scale the app up.
+3. Stop the app, and launch it again.
+4. Input the parameters necessary to scale the app down.

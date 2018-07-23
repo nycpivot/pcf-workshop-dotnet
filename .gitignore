@@ -12,3 +12,5 @@
 /pcf-workshop-dotnet-core-lab02-api/obj
 /labs/pcf-workshop-dotnet-core-lab02-api/bin
 /labs/pcf-workshop-dotnet-core-lab02-api/obj
+/labs/pcf-workshop-dotnet-core-lab02-client/bin/Debug/netcoreapp2.0
+/labs/pcf-workshop-dotnet-core-lab02-client/obj
