@@ -6,16 +6,14 @@ This one day hands-on classroom style session will provide developers (and opera
 
 The source code for all the labs can be cloned to your local desktop using the following git command.
 
-* git clone https://github.com/pivotal-nyc/pcf-workshop-dotnet.git
+		git clone https://github.com/pivotal-nyc/pcf-workshop-dotnet.git
 
 ### Prerequisites
 
 The following tools are required to be installed on the local machine. 
 
-* [cf cli](https://github.com/cloudfoundry/cli#downloads)
-* [git](https://git-scm.com/downloads)
-
-The environment is...
+		[cf cli](https://github.com/cloudfoundry/cli#downloads)
+		[git](https://git-scm.com/downloads)
 
 ## Course Materials
 
@@ -25,13 +23,13 @@ Each lab is independent. We have attempted to categorize them according to skill
 
 * Login to lab environment with the following details.
 
-		* DETAILS GO HERE...
+		DETAILS GO HERE...
 
 * To get help with any command, simply type that command without parameters.
 
-		* cf app
-		* cf service
-		* cf create-service
+		cf app
+		cf service
+		cf create-service
 
 ### [Lab 1](https://github.com/pivotal-nyc/pcf-workshop-dotnet/tree/master/labs/pcf-workshop-dotnet-core-lab01) - Beginner
 

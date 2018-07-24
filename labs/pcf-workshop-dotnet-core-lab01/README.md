@@ -18,12 +18,14 @@
 1. Open the manifest.yml file included in the project.
 2. Add the following settings to the file.
 
----
-applications:
--   name: [app-name]-[your-name]-lab01
-	buildpack: dotnet_core_buildpack
-	instances: 1
-	memory: 256M
+		```
+		---
+		applications:
+		-   name: [app-name]-[your-name]-lab01
+			buildpack: dotnet_core_buildpack
+			instances: 1
+			memory: 256M
+		```
 
 3. In the Configure method of the Startup.cs file, change the "Hello World!" text.
 4. Publish a Release build.
