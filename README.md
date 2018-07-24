@@ -19,18 +19,25 @@ The environment is...
 
 ## Course Materials
 
-It is recommended to follow the labs in sequence, but 
+Each lab is independent. We have attempted to categorize them according to skill level. Feel free to choose any lab at the level you are most comfortable with.
 
-### Intro
+### Introduction
 
 * Login to lab environment with the following details.
 
+		* DETAILS GO HERE...
+
+* To get help with any command, simply type that command without parameters.
+
+		* cf app
+		* cf service
+		* cf create-service
+
 ### [Lab 1](https://github.com/pivotal-nyc/pcf-workshop-dotnet/tree/master/labs/pcf-workshop-dotnet-core-lab01) - Beginner
 
-* Step 1, describes how to quickly get help for any CLI command.
-* Step 2, demonstrates pushing an app using the CLI only.
-* Step 3, demonstrates pushing an app using the CLI with a manifest file.
-* Step 4, demonstrates scaling an app with more disk space, memory, and running instance count.
+* Step 1, demonstrates pushing an app using the CLI only.
+* Step 2, demonstrates pushing an app using the CLI with a manifest file.
+* Step 3, demonstrates scaling an app with more disk space, memory, and running instance count.
 
 ### [Lab 2](https://github.com/pivotal-nyc/pcf-workshop-dotnet/tree/master/labs/pcf-workshop-dotnet-core-lab02-api) - Intermediate
 

@@ -1,14 +1,6 @@
 ﻿## LAB 1: DEPLOY
 
-### STEP 1 - HELP
-
-1. Type any command in the CF CLI without any parameters. The following examples
-
-	cf app
-	cf service
-	cf create-service
-
-### STEP 2 - DEFAULT PUSH
+### STEP 1 - DEFAULT PUSH
 
 1. Navigate to the folder containing the lab 1 project files.
 2. Without making any changes, publish a Release build.
@@ -21,7 +13,7 @@
 
 4. Navigate to url from the PCF dashboard.
 
-### STEP 3 - MANIFEST PUSH
+### STEP 2 - MANIFEST PUSH
 
 1. Open the manifest.yml file included in the project.
 2. Add the following settings to the file.
@@ -44,7 +36,7 @@ applications:
 
 8. Confirm the new value is output on the page.
 	
-### STEP 4 - SCALE
+### STEP 3 - SCALE
 
 1. Observe instance count, memory, disk size from apps manager or CLI.
 
