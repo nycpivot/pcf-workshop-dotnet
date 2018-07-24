@@ -1,6 +1,6 @@
-﻿# LAB 2: SERVICES
+﻿# Lab 2: Services
 
-## STEP 1 - WEB API
+## STEP 1 -Web API
 
 1. Navigate to the folder containing the lab 2 project files.
 2. Open the manifest.yml file and provide a unique name.
@@ -14,15 +14,15 @@
 
 5. Navigate to url from the PCF dashboard.
 
-## STEP 2 - CREATE AND BIND A SERVICE
+## STEP 2 - Create and Bind a Service
 
 1. View marketplace in Apps Manager or CLI.
 
-		cf m|marketplace
+		cf marketplace
 
 2. View details for app-autoscaler to determine the free plan.
 
-		cf m -s app-autoscaler
+		cf marketplace -s app-autoscaler
 
 3. Create app-autoscaler from Apps Manager or CLI.
 
@@ -40,7 +40,7 @@
 
 		cf restage [app-name]-[your-name]-lab02
 	
-## STEP 3 - CONFIGURE SERVICE (APPS MANAGER ONLY)
+### STEP 3 - CONFIGURE SERVICE (APPS MANAGER ONLY)
 
 1. Open App AutoScaler from Services tab.
 2. Click Manage link in upper right corner.
@@ -58,7 +58,7 @@
 14. From the App tab in your Space, click on the app name.
 15. In the Processes and Instances section, observe the two minimum running instances.
 
-## STEP 4 - LOAD TESTER
+### STEP 4 - LOAD TESTER
 
 1. Launch the client console application.
 2. Input the parameters necessary to scale the app up.

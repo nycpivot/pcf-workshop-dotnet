@@ -11,16 +11,16 @@ namespace Pcf.Workshop.Dotnet.Core.Lab04.Before.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Contact()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Your contact page.";
 
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult About()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Your application description page.";
 
             return View();
         }

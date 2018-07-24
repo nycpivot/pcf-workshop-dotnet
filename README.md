@@ -44,6 +44,8 @@ It is recommended to follow the labs in sequence, but
 * Step 1, forcibly kill one app instance out of three to observe the platform restore it automatically.
 * Step 2, demonstrates a blue-green deployment to execute a zero-downtime deployment.
 
-### [Lab 4](https://github.com/pivotal-nyc/pcf-workshop-dotnet/tree/master/labs/pcf-workshop-dotnet-core-lab03) - Advanced
+### [Lab 4](https://github.com/pivotal-nyc/pcf-workshop-dotnet/tree/master/labs/pcf-workshop-dotnet-core-lab04-before) - Advanced
 
-* Step 1, 
+* Step 1, read configuration settings from appsettings.json file.
+* Step 2, read configuration settings from environment variables.
+* Step 3, inject configuration settings with Steeltoe read from an external config server.

@@ -1,6 +1,6 @@
 ﻿# Lab 3: Self Healing & Zero-Downtime Deployment
 
-## STEP 1 - Self Healing
+### STEP 1 - Self Healing
 
 1. Navigate to the lab 3 project folder.
 2. Publish a Release build.
@@ -22,7 +22,7 @@
 
 		cf logs [app-name]-[your-name]-lab03 --recent
 
-## STEP 2 - Blue-Green Deployment
+### STEP 2 - Blue-Green Deployment
 
 1. Edit the footer text on the _Layout.cshtml page to indicate a new version, i.e., 2018 - Pcf.Workshop.Core.Lab03 2.0
 2. Rebuild and publish again.

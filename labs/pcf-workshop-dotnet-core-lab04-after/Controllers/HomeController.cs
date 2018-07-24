@@ -1,26 +1,37 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Pcf.Workshop.Dotnet.Core.Lab04.After.Models;
 
 namespace Pcf.Workshop.Dotnet.Core.Lab04.After.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly IConfiguration config;
+
+        public HomeController(IConfiguration config)
         {
-            return View();
+            this.config = config;
         }
 
-        public IActionResult About()
+        public IActionResult Index()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
+        public IActionResult About()
+        {
+            ViewData["Environment"] = this.config["Environment"];
+
+            ViewData["VCAP_APPLICATION"] = this.config["VCAP_APPLICATION"];
+            ViewData["VCAP_SERVICES"] = this.config["VCAP_SERVICES"];
 
             return View();
         }
