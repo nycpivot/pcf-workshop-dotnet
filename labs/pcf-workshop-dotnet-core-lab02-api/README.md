@@ -1,6 +1,6 @@
-﻿# Lab 2: Services
+﻿## LAB 2: SERVICES
 
-## STEP 1 -Web API
+## STEP 1 - WEB API
 
 1. Navigate to the folder containing the lab 2 project files.
 2. Open the manifest.yml file and provide a unique name.
@@ -14,7 +14,7 @@
 
 5. Navigate to url from the PCF dashboard.
 
-## STEP 2 - Create and Bind a Service
+## STEP 2 - CREATE & BIND SERVICES
 
 1. View marketplace in Apps Manager or CLI.
 

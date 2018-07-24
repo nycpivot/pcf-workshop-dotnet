@@ -1,6 +1,6 @@
-﻿# Lab 4: Configuration
+﻿## LAB 4: CONFIGURATION
 
-### STEP 1 - Read appsettings
+### STEP 1 - READ APPSETTINGS
 
 1. Navigate to the lab04-after project folder.
 2. Add two appsettings.json files, one called appsettings.staging.json, and another appsettings.production.json.
@@ -38,7 +38,7 @@
 
 10. Navigate to the About page to observe the corresponding configuration setting output.
 
-### STEP 2 - Read Environment variables
+### STEP 2 - READ ENVIRONMENT VARIABLES
 
 1. In the About action of HomeController, add the following two lines, under the line added in Step 1.5.
 

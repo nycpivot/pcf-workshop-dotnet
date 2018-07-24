@@ -1,4 +1,4 @@
-﻿# LAB 1: DEPLOY
+﻿## LAB 1: DEPLOY
 
 ### STEP 1 - HELP
 
