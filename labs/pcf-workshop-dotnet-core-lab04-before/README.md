@@ -2,10 +2,10 @@
 
 ### STEP 1 - READ APPSETTINGS
 
-1. Navigate to the lab04-after project folder.
-2. Add two appsettings.json files, one called appsettings.staging.json, and another appsettings.production.json.
-3. Add any custom setting in each file that identifies the environment with that file, i.e., "Message": "Hello Staging".
-4. Add json files to the configuration in the BuildWebHost function in Program.js.
+1. Open the lab04-before project.
+2. Include two appsettings.json files to the project, 1) appsettings.staging.json, and 2) appsettings.production.json.
+3. Note the custom Environment key set to file of the same name.
+4. Uncomment the code in the BuildWebHost function in Program.js.
 
 		WebHost.CreateDefaultBuilder(args)
             .UseStartup<Startup>()
@@ -18,11 +18,14 @@
             })
             .Build();
 
-5. In the About action of HomeController, add the following code to capture the environment value from appsettings.json.
+	This code is used when configuration values should be read from settings files compiled with the code.
+	It will be shortly, however, that appsettings can be overriden from other configuration sources.
+
+5. In the About action of HomeController, uncomment the following line to get the value from the appsettings file.
 
 		ViewData["Environment"] = this.config["Environment"];
 
-6. Replace the ViewData["Message"] line in the About.cshtml view with the following.
+6. Uncomment the following line in the About.cshtml view.
 
 		<h3>Lab 4 @ViewData["Environment"]</h3>
 
@@ -36,16 +39,16 @@
 
 		cf set-env [app-name]-[your-name]-lab04 ASPNETCORE_ENVIRONMENT staging
 
-10. Navigate to the About page to observe the corresponding configuration setting output.
+10. Navigate to the About page and observe the corresponding configuration setting output.
 
 ### STEP 2 - READ ENVIRONMENT VARIABLES
 
-1. In the About action of HomeController, add the following two lines, under the line added in Step 1.5.
+1. In the About action of HomeController, uncomment the following two lines.
 
 		ViewData["VCAP_APPLICATION"] = this.config["VCAP_APPLICATION"];
         ViewData["VCAP_SERVICES"] = this.config["VCAP_SERVICES"];
 
-2. In the About.cshtml view, add the following lines under those added in Step 1.6.
+2. In the About.cshtml view, uncomment the following lines.
 
 		<h2>VCAP_APPLICATION</h2>
 		<p>@ViewData["VCAP_APPLICATION"]</p>
