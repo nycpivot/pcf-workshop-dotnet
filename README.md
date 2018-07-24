@@ -12,8 +12,8 @@ The source code for all the labs can be cloned to your local desktop using the f
 
 The following tools are required to be installed on the local machine. 
 
-		[cf cli](https://github.com/cloudfoundry/cli#downloads)
-		[git](https://git-scm.com/downloads)
+[cf cli](https://github.com/cloudfoundry/cli#downloads)
+[git](https://git-scm.com/downloads)
 
 ## Course Materials
 
@@ -53,4 +53,5 @@ Each lab is independent. We have attempted to categorize them according to skill
 
 * Step 1, read configuration settings from appsettings.json file.
 * Step 2, read configuration settings from environment variables.
-* Step 3, inject configuration settings with Steeltoe read from an external config server.
+* Step 3, inject configuration settings with Steeltoe Options.
+* Step 4, inject configuration settings with Steeltoe read from a config server.

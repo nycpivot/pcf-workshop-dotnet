@@ -7,12 +7,12 @@ namespace Pcf.Workshop.Dotnet.Core.Lab04.Before.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IConfiguration config;
+        //private readonly IConfiguration config;
 
-        public HomeController(IConfiguration config)
-        {
-            this.config = config;
-        }
+        //public HomeController(IConfiguration config)
+        //{
+        //    this.config = config;
+        //}
 
         public IActionResult Index()
         {

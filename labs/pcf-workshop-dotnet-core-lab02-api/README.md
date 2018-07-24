@@ -26,7 +26,7 @@
 
 3. Create app-autoscaler from Apps Manager or CLI.
 
-		cf create-service app-autoscaler standard pcf-workshop-auto-scaler
+		cf create-service app-autoscaler standard pcf-workshop-dotnet-core-app-autoscaler
 
 4. Verify creation of service.
 

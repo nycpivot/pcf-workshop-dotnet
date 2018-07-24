@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Steeltoe.Extensions.Configuration.CloudFoundry;
 
 namespace Pcf.Workshop.Dotnet.Core.Lab04.After
 {
@@ -21,6 +22,7 @@ namespace Pcf.Workshop.Dotnet.Core.Lab04.After
                     config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                         .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
                 })
+                .AddCloudFoundry()
                 .Build();
     }
 }

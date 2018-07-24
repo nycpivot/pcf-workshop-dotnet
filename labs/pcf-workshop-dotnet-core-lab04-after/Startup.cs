@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Steeltoe.Extensions.Configuration.CloudFoundry;
 
 namespace Pcf.Workshop.Dotnet.Core.Lab04.After
 {
@@ -18,6 +19,9 @@ namespace Pcf.Workshop.Dotnet.Core.Lab04.After
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddOptions();
+            services.ConfigureCloudFoundryOptions(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
