@@ -25,57 +25,42 @@
 	This code is used when configuration values should be read from settings files compiled with the code.
 	It will be shortly, however, that appsettings can be overriden from other configuration sources.
 
-5. Include the AppSettingsController. This will just read from the config and store the values for the view.
+5. Include the AppSettingsController. This will just read from the config, populated from appsettings file, and store the values for the view.
 6. Include the Views/AppSettings folder. This file displays the ConnectionString.
 7. Uncomment the App Settings navbar menu item in Shared/_Layout.cshtml.
-8. Publish a Release build.
+8. Uncomment the following line in the manifest.yml file, which will set environment variables on every push.
 
-8. From the Release folder, push the app.
+		env:
+			ASPNETCORE_ENVIRONMENT: staging
+
+9. Publish a Release build.
+10. From the Release folder, push the app.
 
 		cf push
 
-9. Navigate to the About page and observe the corresponding configuration setting output.
+11. Navigate to the About page and observe the corresponding configuration setting output.
 	The ConnectionString should reflect the same value as the ASPNETCRE_ENVIRONMENT set in the manifest.yml file.
 
-10. This can be changed by changing the environment variable from the command line.
+12. This can be changed by changing the environment variable from the command line.
 	Set the ASPNETCORE_ENVIRONMENT variable to production.
 
 		cf set-env [app-name]-[your-name]-lab04 ASPNETCORE_ENVIRONMENT production
 		cf restage [app-name]-[your-name]-lab04
 
-11. Refresh the About page and confirm the change.
-
-
-
-
-
+13. Refresh the App Settings page and confirm the change.
 
 ### STEP 2 - READ ENVIRONMENT VARIABLES
 
-1. In the HomeController, uncomment the constructor following two lines in the About action.
-
-		ViewData["VCAP_APPLICATION"] = this.config["VCAP_APPLICATION"];
-        ViewData["VCAP_SERVICES"] = this.config["VCAP_SERVICES"];
-
-2. In the About.cshtml view, uncomment the following lines.
-
-		<h2>VCAP_APPLICATION</h2>
-		<p>@ViewData["VCAP_APPLICATION"]</p>
-
-		<h2>VCAP_SERVICES</h2>
-		<p>@ViewData["VCAP_SERVICES"]</p>
-
-3. Note in the manifest.yml file, we are binding to the service created in Lab 2, Step 2.3 while pushing the app in one step.
-4. Publish a Release build.
-5. From the Release folder, push the app.
+1. Include the EnvironmentController to the project. This will just read from the config, populated from environment variables, and store the values for the view.
+2. Include the Views/Environment folder. This file displays Application settings and bound Services.
+3. Uncomment the Environment navbar menu item in Shared/_Layout.cshtml.
+4. Uncomment the following line in the manifest.yml file, which will make it possible to bind services on every push.
+5. Publish a Release build.
+6. From the Release folder, push the app.
 
 	cf push
 
-6. Set the ASPNETCORE_ENVIRONMENT variable to either development, staging, or production.
-
-		cf set-env [app-name]-[your-name]-lab04 ASPNETCORE_ENVIRONMENT staging
-
-7. Navigate to the About page to observe the corresponding configuration setting output.
+8. Navigate to the Environment page to observe the output.
 
 ### STEP 3 - INJECT STEELTOE OPTIONS
 

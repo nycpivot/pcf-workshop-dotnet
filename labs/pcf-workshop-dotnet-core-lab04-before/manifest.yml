@@ -6,3 +6,5 @@ applications:
     memory: 256M
     env:
         ASPNETCORE_ENVIRONMENT: staging
+    services:
+    -   pcf-workshop-dotnet-core-app-autoscaler

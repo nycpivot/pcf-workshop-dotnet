@@ -1,7 +1,9 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
+﻿@{
+    ViewData["Title"] = "Environment Variables";
 }
 
-<h2>Index</h2>
+<h2>Application Settings</h2>
+<p>@ViewData["VCAP_APPLICATION"]</p>
 
+<h2>Services</h2>
+<p>@ViewData["VCAP_SERVICES"]</p>

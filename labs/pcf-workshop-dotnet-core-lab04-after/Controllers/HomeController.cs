@@ -23,10 +23,7 @@ namespace Pcf.Workshop.Dotnet.Core.Lab04.After.Controllers
 
         public IActionResult About()
         {
-
-
-            //ViewData["VCAP_APPLICATION"] = this.config["VCAP_APPLICATION"];
-            //ViewData["VCAP_SERVICES"] = this.config["VCAP_SERVICES"];
+            ViewData["Message"] = "Your about page.";
 
             return View();
         }
