@@ -2,8 +2,10 @@
     ViewData["Title"] = "Environment Variables";
 }
 
-<h2>Application Settings</h2>
+<h2>@ViewData["Title"]</h2>
+
+<h3>Application Settings</h3>
 <p>@ViewData["VCAP_APPLICATION"]</p>
 
-<h2>Services</h2>
+<h3>Services</h3>
 <p>@ViewData["VCAP_SERVICES"]</p>

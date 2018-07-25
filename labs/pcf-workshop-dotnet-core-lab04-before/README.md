@@ -25,8 +25,8 @@
 	This code is used when configuration values should be read from settings files compiled with the code.
 	It will be shortly, however, that appsettings can be overriden from other configuration sources.
 
-5. Include the AppSettingsController. This will just read from the config, populated from appsettings file, and store the values for the view.
-6. Include the Views/AppSettings folder. This file displays the ConnectionString.
+5. Include the AppSettingsController to the project. This will just read from the config, populated from appsettings file, and store the values for the view.
+6. Include the Views/AppSettings folder to the project. This file displays the ConnectionString.
 7. Uncomment the App Settings navbar menu item in Shared/_Layout.cshtml.
 8. Uncomment the following line in the manifest.yml file, which will set environment variables on every push.
 
@@ -52,7 +52,7 @@
 ### STEP 2 - READ ENVIRONMENT VARIABLES
 
 1. Include the EnvironmentController to the project. This will just read from the config, populated from environment variables, and store the values for the view.
-2. Include the Views/Environment folder. This file displays Application settings and bound Services.
+2. Include the Views/Environment folder to the project. This file displays Application settings and bound Services.
 3. Uncomment the Environment navbar menu item in Shared/_Layout.cshtml.
 4. Uncomment the following line in the manifest.yml file, which will make it possible to bind services on every push.
 5. Publish a Release build.
@@ -64,13 +64,35 @@
 
 ### STEP 3 - INJECT STEELTOE OPTIONS
 
-1. Add the following Steeltoe Nuget packages to the project.
+1. Note the following NuGet package has been added to the project.
 
 		Steeltoe.Extensions.Configuration.CloudFoundryCore
 
-2. Open Startup.cs file.
+2. Uncomment the code in the BuildWebHost function in Program.js. The necessary line is "AddCloudFoundry()".
+
+		WebHost.CreateDefaultBuilder(args)
+            .UseStartup<Startup>()
+            .ConfigureAppConfiguration((context, config) =>
+            {
+                var env = context.HostingEnvironment;
+
+                config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                    .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
+            })
+			.AddCloudFoundry()
+            .Build();
+
+3. Open Startup.cs file.
 
 		1. uncomment the using statement
 		2. uncomment the two lines in the ConfigureServices method.
 
-3. Open the HomeController, and 1) uncomment the constructor
+4. Include the OptionsController to the project. This will inject configuration settings into type-safe objects.
+5. Include the Views/Options folder to the project. This file displays Application settings and bound Services.
+6. Uncomment the Options navbar menu item in Shared/_Layout.cshtml.
+7. Publish a Release build.
+8. From the Release folder, push the app.
+
+	cf push
+
+9. Navigate to the Options page to observe the output.

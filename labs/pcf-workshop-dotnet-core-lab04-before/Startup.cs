@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Steeltoe.Extensions.Configuration.CloudFoundry;
 
 //************************************************************************
 //LAB 4, STEP 3.1
@@ -26,10 +27,10 @@ namespace Pcf.Workshop.Dotnet.Core.Lab04.Before
             services.AddMvc();
 
             //************************************************************************
-            //LAB 4, STEP 3.2
+            //LAB 4, STEP 3.3
             //************************************************************************
-            //services.AddOptions();
-            //services.ConfigureCloudFoundryOptions(Configuration);
+            services.AddOptions();
+            services.ConfigureCloudFoundryOptions(Configuration);
             //------------------------------------------------------------------------
         }
 

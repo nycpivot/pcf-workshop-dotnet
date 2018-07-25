@@ -4,6 +4,8 @@ applications:
     buildpack: dotnet_core_buildpack
     instances: 1
     memory: 256M
+    routes:
+    -   route: https://pcf-workshop-dotnet-core-lab04.pcfbeta.io
     env:
         ASPNETCORE_ENVIRONMENT: staging
     services:
