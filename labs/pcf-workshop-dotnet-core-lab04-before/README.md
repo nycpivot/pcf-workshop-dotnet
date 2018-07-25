@@ -8,7 +8,7 @@
 		1) appsettings.staging.json
 		2) appsettings.production.json
 
-3. Note the ConnectionString key set to the environment by the name of the file.
+3. Note the ConnectionString key set to the environment by the file of the same name.
 4. Uncomment the code in the BuildWebHost function in Program.js.
 
 		WebHost.CreateDefaultBuilder(args)
@@ -25,19 +25,30 @@
 	This code is used when configuration values should be read from settings files compiled with the code.
 	It will be shortly, however, that appsettings can be overriden from other configuration sources.
 
-5. Include the AppSettingsController.
-6. Include the AppSettings.cshtml view.
-7. Publish a Release build.
+5. Include the AppSettingsController. This will just read from the config and store the values for the view.
+6. Include the Views/AppSettings folder. This file displays the ConnectionString.
+7. Uncomment the App Settings navbar menu item in Shared/_Layout.cshtml.
+8. Publish a Release build.
 
 8. From the Release folder, push the app.
 
 		cf push
 
-9. Set the ASPNETCORE_ENVIRONMENT variable to either development, staging, or production.
+9. Navigate to the About page and observe the corresponding configuration setting output.
+	The ConnectionString should reflect the same value as the ASPNETCRE_ENVIRONMENT set in the manifest.yml file.
 
-		cf set-env [app-name]-[your-name]-lab04 ASPNETCORE_ENVIRONMENT staging
+10. This can be changed by changing the environment variable from the command line.
+	Set the ASPNETCORE_ENVIRONMENT variable to production.
 
-10. Navigate to the About page and observe the corresponding configuration setting output.
+		cf set-env [app-name]-[your-name]-lab04 ASPNETCORE_ENVIRONMENT production
+		cf restage [app-name]-[your-name]-lab04
+
+11. Refresh the About page and confirm the change.
+
+
+
+
+
 
 ### STEP 2 - READ ENVIRONMENT VARIABLES
 
