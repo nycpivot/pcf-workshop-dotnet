@@ -8,7 +8,7 @@
 		1) appsettings.staging.json
 		2) appsettings.production.json
 
-3. Note the ConnectionString key set to the appropriate environment.
+3. Note the ConnectionString key set to the environment by the name of the file.
 4. Uncomment the code in the BuildWebHost function in Program.js.
 
 		WebHost.CreateDefaultBuilder(args)

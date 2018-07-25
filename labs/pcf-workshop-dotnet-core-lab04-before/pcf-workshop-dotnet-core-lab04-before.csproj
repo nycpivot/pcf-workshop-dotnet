@@ -7,6 +7,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\AppSettings\**" />
+    <Compile Remove="Views\Config\**" />
+    <Compile Remove="Views\Environment\**" />
+    <Content Remove="Views\AppSettings\**" />
+    <Content Remove="Views\Config\**" />
+    <Content Remove="Views\Environment\**" />
+    <EmbeddedResource Remove="Views\AppSettings\**" />
+    <EmbeddedResource Remove="Views\Config\**" />
+    <EmbeddedResource Remove="Views\Environment\**" />
+    <None Remove="Views\AppSettings\**" />
+    <None Remove="Views\Config\**" />
+    <None Remove="Views\Environment\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\AppSettingsController.cs" />
+    <Compile Remove="Controllers\ConfigController.cs" />
+    <Compile Remove="Controllers\EnvironmentController.cs" />
+    <Compile Remove="Controllers\HomeController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="appsettings.production.json" />
     <Content Remove="appsettings.staging.json" />
   </ItemGroup>
@@ -24,6 +46,10 @@
     <None Update="manifest.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>
