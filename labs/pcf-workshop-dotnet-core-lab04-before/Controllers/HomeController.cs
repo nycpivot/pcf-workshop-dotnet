@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Pcf.Workshop.Dotnet.Core.Lab04.Before.Models;
 
 namespace Pcf.Workshop.Dotnet.Core.Lab04.Before.Controllers
@@ -20,8 +21,6 @@ namespace Pcf.Workshop.Dotnet.Core.Lab04.Before.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 

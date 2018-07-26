@@ -1,6 +1,12 @@
 ﻿---
 applications:
--   name: [app-name]-[your-name]-lab04
+-   name: pcf-workshop-dotnet-core-lab04
     buildpack: dotnet_core_buildpack
     instances: 1
     memory: 256M
+    routes:
+    -   route: https://pcf-workshop-dotnet-core-lab04.pcfbeta.io
+    env:
+        ASPNETCORE_ENVIRONMENT: staging
+    services:
+    -   pcf-workshop-dotnet-core-app-autoscaler

@@ -7,12 +7,7 @@ namespace Pcf.Workshop.Dotnet.Core.Lab04.After.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IConfiguration config;
 
-        public HomeController(IConfiguration config)
-        {
-            this.config = config;
-        }
 
         public IActionResult Index()
         {
@@ -28,10 +23,7 @@ namespace Pcf.Workshop.Dotnet.Core.Lab04.After.Controllers
 
         public IActionResult About()
         {
-            ViewData["Environment"] = this.config["Environment"];
-
-            ViewData["VCAP_APPLICATION"] = this.config["VCAP_APPLICATION"];
-            ViewData["VCAP_SERVICES"] = this.config["VCAP_SERVICES"];
+            ViewData["Message"] = "Your about page.";
 
             return View();
         }
