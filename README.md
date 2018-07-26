@@ -12,8 +12,8 @@ The source code for all the labs can be cloned to your local desktop using the f
 
 The following tools are required to be installed on the local machine. 
 
-		[cf cli](https://github.com/cloudfoundry/cli#downloads)
-		[git](https://git-scm.com/downloads)
+[cf cli](https://github.com/cloudfoundry/cli#downloads)
+[git](https://git-scm.com/downloads)
 
 ## Course Materials
 
