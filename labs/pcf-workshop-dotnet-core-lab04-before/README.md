@@ -96,3 +96,25 @@
 	cf push
 
 9. Navigate to the Options page to observe the output.
+
+### STEP 4 - GIT CONFIG SERVER & STEELTOE
+
+1. Create a config server service. This can take several minutes.
+
+		cf create-service p-config-server standard pcf-workshop-dotnet-config-server
+
+2. Once it has finished creating the service, open the config.json file within the project.
+	This file will be used to update the service to point to an external git repository of environmental app settings.
+	Execute the following command from the same directory of the file.
+
+	cf update-service pcf-workshop-dotnet-config-server -c config.json
+
+4. Include the ConfigController to the project. This will inject configuration settings read from the github repository.
+5. Include the Views/Config folder to the project. This file displays settings defined from the github repository.
+6. Uncomment the Config navbar menu item in Shared/_Layout.cshtml.
+7. Publish a Release build.
+8. From the Release folder, push the app.
+
+	cf push
+
+9. Navigate to the Config page to observe the output.

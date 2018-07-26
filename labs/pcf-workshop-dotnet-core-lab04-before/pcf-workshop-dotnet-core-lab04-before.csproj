@@ -7,17 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Views\Config\**" />
-    <Content Remove="Views\Config\**" />
-    <EmbeddedResource Remove="Views\Config\**" />
-    <None Remove="Views\Config\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Controllers\ConfigController.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Remove="appsettings.production.json" />
     <Content Remove="appsettings.staging.json" />
   </ItemGroup>
@@ -34,7 +23,14 @@
 
   <ItemGroup>
     <None Include="Views\AppSettings\Index.cshtml" />
+    <None Include="Views\Config\Index.cshtml" />
     <None Include="Views\Environment\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
