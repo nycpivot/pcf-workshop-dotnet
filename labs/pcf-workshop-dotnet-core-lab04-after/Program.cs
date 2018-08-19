@@ -19,7 +19,7 @@ namespace Pcf.Workshop.Dotnet.Core.Lab04.After
                 {
                     var env = context.HostingEnvironment;
 
-                    config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                    config.AddC.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                         .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
                 })
                 .AddCloudFoundry()

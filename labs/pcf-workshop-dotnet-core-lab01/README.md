@@ -22,9 +22,13 @@
 		---
 		applications:
 		-   name: [app-name]-[your-name]-lab01
-			buildpack: dotnet_core_buildpack
+			buildpack: binary_buildpack
+			stack: windows2016
 			instances: 1
-			memory: 256M
+			disk: 512M
+			memory: 512M
+			health-check-type: none
+			command: cmd /c .\pcf-workshop-dotnet-core-lab01 --server.urls http://*:%PORT%
 		```
 
 3. In the Configure method of the Startup.cs file, change the "Hello World!" text.

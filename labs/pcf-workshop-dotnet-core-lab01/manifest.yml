@@ -1,1 +1,10 @@
-﻿
+﻿---
+applications:
+-   name: pcf-workshop-dotnet-core-lab01
+    buildpack: binary_buildpack
+    stack: windows2016
+    instances: 1
+    disk: 256M
+    memory: 256M
+    health-check-type: none
+    command: cmd /c .\pcf-workshop-dotnet-core-lab01 --server.urls http://*:%PORT%

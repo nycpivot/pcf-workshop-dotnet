@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 
 namespace Pcf.Workshop.Dotnet.Core.Lab01
 {
@@ -12,6 +13,9 @@ namespace Pcf.Workshop.Dotnet.Core.Lab01
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseConfiguration(new ConfigurationBuilder()
+                    .AddCommandLine(args)
+                    .Build())
                 .UseStartup<Startup>()
                 .Build();
     }
